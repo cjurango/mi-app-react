@@ -1,0 +1,29 @@
+:root {
+  --background-color: #007bff;
+  --background-color-hover: #1a5595;
+  --background-color-contador: #9ff5d2;
+  --border-color: #1a5595;
+  --border-color-hover: #073e78;
+  --text-color: #fff;
+}
+
+.nav-item {
+  padding: 10px 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--background-color);
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  background-color: var(--background-color-hover);
+  border-color: var(--border-color-hover);
+  color: var(--text-color);
+}
+
+.contador {
+  background-color: var(--background-color-contador);
+  padding: 20px;
+  border-radius: 10px;
+}
