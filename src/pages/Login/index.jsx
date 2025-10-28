@@ -5,7 +5,7 @@ function Login() {
   return (
     <>
       <ThemeToogle />
-      <h1>Login</h1>
+      <h1>Login de la aplicación</h1>
       <p>Ingrese su email y contraseña para iniciar sesión:</p>
       <LoginForm />
     </>
