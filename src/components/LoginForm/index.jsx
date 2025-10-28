@@ -2,8 +2,11 @@ import { useNavigate } from "react-router-dom";
 
 import { useAuth } from "../../hooks/useAuth";
 import useForm from "../../hooks/useForm";
+import { useTheme } from "../../hooks/useTheme";
 
 function LoginForm() {
+  const { theme } = useTheme();
+
   const {
     values: { username, password },
     errors,
@@ -44,7 +47,14 @@ function LoginForm() {
         onChange={(e) => handleChange("password", e.target.value)}
       />
       {errors.password && <p className="error">{errors.password}</p>}
-      <button disabled={isSubmitting} type="submit">
+      <button
+        disabled={isSubmitting}
+        type="submit"
+        style={{
+          backgroundColor: theme === "dark" ? "#333" : "#fff",
+          color: theme === "dark" ? "#fff" : "#000",
+        }}
+      >
         {isSubmitting ? "Ingresando..." : "Ingresar"}
       </button>
     </form>

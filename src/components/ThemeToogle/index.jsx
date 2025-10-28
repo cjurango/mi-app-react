@@ -1,10 +1,10 @@
-import useLocalStorage from "../../hooks/useLocalStorage";
+import { useTheme } from "../../hooks/useTheme";
 
 function ThemeToogle() {
-  const [theme, setTheme] = useLocalStorage("theme", "light");
+  const { theme, toggleTheme } = useTheme();
 
   const handleToggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    toggleTheme();
   };
 
   return (
